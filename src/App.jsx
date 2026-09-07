@@ -22,13 +22,14 @@ const PROFILE = {
   linkedin: "https://www.linkedin.com/in/dineth-wijesinghe",
   careerGoal:
     "To build a career in Software Engineering, Cloud, DevOps, and SRE — focusing on reliable, scalable, and observable cloud-native systems.",
-  about: `I'm a third-year Information Technology undergraduate at the University of Moratuwa with a strong passion for Software Engineering, Cloud Computing, DevOps, Site Reliability Engineering, and Observability. I enjoy building and experimenting with cloud-native applications, infrastructure automation, containerized systems, and reliable software architectures.\n\nMy projects have given me practical experience with technologies including AWS, Docker, Kubernetes, OpenTelemetry, PostgreSQL, Redis, CI/CD, and Linux. I'm particularly interested in understanding how modern software systems are designed, deployed, monitored, and optimized for reliability.`,
+  about: `I'm a third-year Information Technology undergraduate at the University of Moratuwa with a strong passion for Software Engineering, Cloud Computing, DevOps, Site Reliability Engineering, and Observability. I enjoy building and experimenting with cloud-native applications, infrastructure automation, containerized systems, and reliable software architectures.\n\nMy projects have given me practical experience with technologies including Go, AWS, Docker, Kubernetes, OpenTelemetry, PostgreSQL, Redis, CI/CD, and Linux. I'm particularly interested in understanding how modern software systems are designed, deployed, monitored, and optimized for reliability.`,
 };
 
 const SKILLS = [
   {
     category: "Languages",
     items: [
+      { name: "Go", icon: "go" },
       { name: "Python", icon: "python" },
       { name: "JavaScript", icon: "javascript" },
       { name: "TypeScript", icon: "typescript" },
@@ -62,6 +63,7 @@ const SKILLS = [
       { name: "GitHub Actions", icon: "github" },
       { name: "CI/CD", icon: "git" },
       { name: "Linux", icon: "linux" },
+      { name: "Nginx", icon: "nginx" },
     ],
   },
   {
@@ -90,6 +92,14 @@ const SKILLS = [
 ];
 
 const PROJECTS = [
+  {
+    title: "Tunnix — Self-Hosted Developer Tunneling Platform",
+    desc: "A high-performance developer platform that securely exposes local HTTP servers to the internet via WebSocket frame multiplexing. Features a 4-tier token auth chain (Email OTP, persistent agent tokens, short-lived JWTs), a high-concurrency Go WebSocket ingress gateway, a cross-platform Go CLI agent, custom subdomain routing (*.sslip.io), and a modern React 18 dashboard with real-time tunnel telemetry.",
+    tech: ["Go", "WebSocket", "Bun", "Hono", "TypeScript", "React", "SQLite", "Docker", "AWS", "Nginx"],
+    color: "#6366f1",
+    link: "https://github.com/dineTH2003-dev/Tunnix",
+    demoLink: "https://prod.d1jbmcf0n8m3v0.amplifyapp.com",
+  },
   {
     title: "CloudSight — AI-Powered Cloud Observability Platform",
     desc: "An AI-powered observability platform to monitor cloud infrastructure, detect anomalies, and assist engineers with incident analysis and remediation. Combines unified telemetry collection, ML-based anomaly detection (Isolation Forest), AI-assisted root-cause analysis via Google Gemini, and incident management — all on an AWS-based cloud architecture.",
@@ -205,6 +215,17 @@ const EXPLORING = [
 
 /* SVG ICONS */
 const LangIcons = {
+  go: (
+    <svg viewBox="0 0 128 128" width="20" height="20">
+      <path fill="#00ADD8" d="M12.2 51.6c1.7-2.4 3.7-4.6 6-6.4 1.4-1.1 3-2 4.6-2.8l2.2 3.7c-1.4.7-2.7 1.4-3.8 2.4-1.9 1.5-3.5 3.3-4.9 5.3l-4.1-2.2zm14.8-10.2c2.2-1.8 4.7-3.2 7.4-4.3 1.6-.7 3.3-1.2 5.1-1.6l1.2 4.1c-1.5.3-3 .7-4.4 1.3-2.3.9-4.4 2.1-6.3 3.6l-3-3.1zm17.1-6.4c2.6-1 5.4-1.7 8.2-2 1.7-.2 3.5-.3 5.3-.1l.3 4.3c-1.6-.1-3.2 0-4.7.2-2.5.3-4.9.9-7.2 1.7l-1.9-4.1zm18.3-2.4c2.8-.2 5.6 0 8.4.5 1.7.3 3.4.8 5.1 1.4l-1.4 4.1c-1.5-.5-3-.9-4.5-1.2-2.5-.5-5-.6-7.5-.5l-.1-4.3z"/>
+      <path fill="#00ADD8" d="M37.8 64.7c0-7.3 5.4-13.1 13-13.1 7.4 0 12.7 5.7 12.7 13.1s-5.3 13.1-12.7 13.1c-7.6 0-13-5.8-13-13.1zm20.7 0c0-4.6-3.2-8.3-7.7-8.3-4.6 0-7.8 3.7-7.8 8.3 0 4.5 3.2 8.3 7.8 8.3 4.5 0 7.7-3.8 7.7-8.3zm19.6-12.5h4.9v21.3c0 7.6-4.5 11.9-11.8 11.9-3.7 0-7-1.1-9.4-3l2.6-3.7c1.8 1.4 4.2 2.2 6.7 2.2 4.4 0 7-2.4 7-7.2v-2.7c-1.8 2.3-4.6 3.6-7.8 3.6-6.8 0-11.8-5.3-11.8-12.2 0-7 5.1-12.4 11.9-12.4 3.3 0 6.1 1.4 7.9 3.8v-4.3zm0 10.3c-.9-2.3-3.1-3.8-5.8-3.8-4.4 0-7.5 3.6-7.5 8.1 0 4.4 3 8 7.5 8 2.7 0 4.9-1.5 5.8-3.9v-8.4z"/>
+    </svg>
+  ),
+  nginx: (
+    <svg viewBox="0 0 128 128" width="20" height="20">
+      <path fill="#009639" d="M64 2L8 34v60l56 32 56-32V34L64 2zm25 80l-30-44h-5v44h-8V48h5l30 44h5V48h8v34h-5z"/>
+    </svg>
+  ),
   python: (
     <svg viewBox="0 0 128 128" width="20" height="20">
       <linearGradient id="pyA" x1="70.3" x2="170.7" y1="1237.4" y2="1151.1" gradientTransform="matrix(.563 0 0 -.568 -29.2 707.8)" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#5A9FD4"/><stop offset="1" stopColor="#306998"/></linearGradient>
