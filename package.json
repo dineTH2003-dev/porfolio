@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "dineth-portfolio",
   "version": "1.0.0",
   "type": "module",
-  "description": "Personal portfolio of Arosh Nimantha Wijesinghe",
+  "description": "Engineering portfolio of Dineth Wijesinghe — Software Engineering, Cloud, DevOps, SRE, and Distributed Systems",
   "main": "index.jsx",
   "scripts": {
     "dev": "vite",
@@ -12,12 +12,17 @@
   },
   "keywords": [
     "portfolio",
+    "software-engineering",
+    "cloud-engineering",
+    "devops",
+    "sre",
+    "cybersecurity",
+    "aws",
+    "opentelemetry",
     "react",
-    "vite",
-    "ai",
-    "ml"
+    "vite"
   ],
-  "author": "Arosh Nimantha Wijesinghe",
+  "author": "Dineth Wijesinghe",
   "license": "MIT",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
